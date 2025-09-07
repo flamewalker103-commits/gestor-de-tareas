@@ -6,6 +6,12 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
+// Middleware para registrar las solicitudes
+app.use((req, res, next) => {
+    console.log(`${req.method} ${req.path}`);
+    next();
+});
+
 // Rutas básicas
 app.get('/api/tareas', (req, res) => {
     res.send('Listar tareas');
