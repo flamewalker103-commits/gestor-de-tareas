@@ -7,7 +7,7 @@
     "start": "node server.js",
     "test": "jest"
   },
-  "author": "Tu Nombre",
+  "author": "Nuevo Nombre",
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1",
