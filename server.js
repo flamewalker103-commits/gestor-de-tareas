@@ -26,7 +26,7 @@ app.post('/api/tareas', (req, res) => {
 
 // Health check endpoint
 app.get('/health', (req, res) => {
-    res.status(200).send('OK');
+    res.status(200).send({ status: 'OK' });
 });
 
 app.listen(PORT, () => {
