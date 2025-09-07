@@ -11,6 +11,11 @@ app.get('/api/tareas', (req, res) => {
     res.send('Listar tareas');
 });
 
+// Health check endpoint
+app.get('/health', (req, res) => {
+    res.status(200).send('OK');
+});
+
 app.listen(PORT, () => {
     console.log(`Servidor en ejecución en http://localhost:${PORT}`);
 });
