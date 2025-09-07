@@ -11,6 +11,13 @@ app.get('/api/tareas', (req, res) => {
     res.send('Listar tareas');
 });
 
+// Endpoint para crear una nueva tarea
+app.post('/api/tareas', (req, res) => {
+    const nuevaTarea = req.body;
+    // Aquí se agregaría la lógica para guardar la nueva tarea
+    res.status(201).send(nuevaTarea);
+});
+
 // Health check endpoint
 app.get('/health', (req, res) => {
     res.status(200).send('OK');
