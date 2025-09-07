@@ -8,7 +8,7 @@ app.use(express.json());
 
 // Middleware para registrar las solicitudes
 app.use((req, res, next) => {
-    console.log(`${req.method} ${req.path}`);
+    console.log(`[${new Date().toISOString()}] ${req.method} ${req.path}`);
     next();
 });
 
